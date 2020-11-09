@@ -31,6 +31,7 @@ public enum BinOp implements Op {
   LXOR,
   SHL,
   SHR,
+  USHR,
   LT,
   GT,
   LE,
@@ -80,6 +81,8 @@ public enum BinOp implements Op {
         return "<<";
       case SHR:
         return ">>";
+      case USHR:
+        return ">>>";
       case LT:
         return "<";
       case GT:
