@@ -39,12 +39,19 @@ def get_bin_jar_dirs():
                                     "target", "graphicsfuzz"))
     if res is not None:
         return res
+    '''
+    if res:
+       return res
+    '''
 
     # Perhaps we are running from the zip.
     res = try_get_jar_bin_dirs(path(os.path.dirname(HERE), os.pardir))
     if res is not None:
         return res
-
+    '''
+    if res:
+       return res
+    '''
     raise Exception("Could not find bin and jar directories")
 
 
